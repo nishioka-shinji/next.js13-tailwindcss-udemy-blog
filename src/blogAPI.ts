@@ -7,8 +7,6 @@ export const getAllArticles = async (): Promise<Article[]> => {
     throw new Error("Error from getAllArticles");
   }
 
-  await new Promise((resolve) => setTimeout(resolve, 1500)); // fake delay
-
   const articles = await res.json();
   return articles;
 };
